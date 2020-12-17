@@ -151,7 +151,7 @@
       <div class="main-container"><a href=""></a>
         <h3 style="text-align: center;">Get In Touch</h3>
 
-        <form id="contact-form" method="POST" action="/addname">
+        <form id="contact-form" class="contact-form" >
             <a name="contact"></a>
 
             <label>Name</label>
@@ -170,47 +170,8 @@
         </form>
     </div>
     </section>
-    <!-- <script  src="script.js" defer></script> -->
-    <script>
-      const subBtn=document.getElementById('submit-btn')
-let theme = localStorage.getItem('theme')
-
-
-
-if(theme == null){
-	setTheme('light')
-}else{
-	setTheme(theme)
-}
-let themeDots = document.getElementsByClassName('theme-dot')
-
-
-for (var i=0; themeDots.length > i; i++){
-	themeDots[i].addEventListener('click', function(){
-		let mode = this.dataset.mode
-		console.log('Option clicked:',mode)
-		 setTheme(mode)
-	})
-}
-function setTheme(mode){
-    if(mode == 'light'){
-		document.getElementById('theme-style').href = '../static/index.css'
-	}
-
-	if(mode == 'blue'){
-		document.getElementById('theme-style').href = '../static/blue.css'
-	}
-
-	if(mode == 'green'){
-		document.getElementById('theme-style').href = '../static/green.css'
-	}
-
-	if(mode == 'purple'){
-		document.getElementById('theme-style').href = '../static/purple.css'
-	}
-
-	localStorage.setItem('theme', mode)
-}
-    </script>
+    <script  src="https://www.gstatic.com/firebasejs/8.2.0/firebase.js"></script>
+   
+    <script  src="index.js" ></script>
   </body>
 </html>
